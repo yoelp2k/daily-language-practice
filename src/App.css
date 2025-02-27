@@ -49,3 +49,33 @@ button:hover {
   margin: 20px auto;
   max-width: 400px;
 }
+
+/* Markdown Styles */
+.description p {
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+.description ul, .description ol {
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+
+.question strong, .answer strong {
+  color: #2c5282;
+}
+
+.question em, .answer em {
+  color: #805ad5;
+}
+
+.footer {
+  margin-top: 2em;
+  padding: 1em;
+  background: #f7fafc;
+  border-radius: 4px;
+}
+
+.footer ul {
+  margin-left: 1.5em;
+}

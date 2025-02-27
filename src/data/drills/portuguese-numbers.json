@@ -1,0 +1,50 @@
+{
+  "id": "portuguese-numbers-drill",
+  "title": "# Portuguese Numbers Drill",
+  "description": "Practice the basic numbers in Portuguese. Learn to count from **one** to **ten** and beyond.",
+  "exercises": [
+    {
+      "question": "How do you say '**one**' in Portuguese?",
+      "answer": "**um**",
+      "type": "free-text"
+    },
+    {
+      "question": "How do you say '**two**' in Portuguese?",
+      "answer": "**dois**",
+      "type": "free-text"
+    },
+    {
+      "question": "How do you say '**three**' in Portuguese?",
+      "answer": "**três**",
+      "type": "free-text"
+    },
+    {
+      "question": "Choose the correct translation for '**four**' in Portuguese:",
+      "answer": "**quatro**",
+      "type": "selection",
+      "options": ["**quatro**", "**cinco**", "**seis**"]
+    },
+    {
+      "question": "What is the correct Portuguese word for '**five**'?",
+      "answer": "**cinco**",
+      "type": "free-text"
+    },
+    {
+      "question": "Is '**sete**' the translation for '**seven**' in Portuguese?",
+      "answer": "true",
+      "type": "true-false"
+    },
+    {
+      "question": "How do you say '**ten**' in Portuguese?",
+      "answer": "**dez**",
+      "type": "free-text"
+    },
+    {
+      "question": "Choose the correct translation for '**nine**' in Portuguese:",
+      "answer": "**nove**",
+      "type": "selection",
+      "options": ["**oito**", "**nove**", "**dez**"]
+    }
+  ],
+  "footer": "**Tip:** Practice these numbers aloud to master pronunciation. Try counting everyday objects in Portuguese!"
+}

@@ -1,6 +1,6 @@
 import { DrillProps } from '../types';
 import basicGreetings from '../data/drills/basic-greetings.json';
-import basicNumbers from '../data/drills/basic-numbers.json';
+import basicNumbers from '../data/drills/portuguese-numbers.json';
 
 export const loadDrills = async (): Promise<DrillProps[]> => {
   // For now, return static imports

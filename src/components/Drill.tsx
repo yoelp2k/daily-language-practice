@@ -1,73 +1,116 @@
 import React, { useState } from 'react';
-import { DrillProps, DrillState } from '../types';
+import ReactMarkdown from 'react-markdown';
+import { DrillProps } from '../types';
 import './Drill.css';
 
-const Drill: React.FC<DrillProps> = ({ exercises, description, footer }) => {
-  const [state, setState] = useState<DrillState>({
-    answers: exercises.map(() => ''),
-    submitted: exercises.map(() => false),
-    isCorrect: exercises.map(() => false)
-  });
+const Drill: React.FC<DrillProps> = ({ title, description, exercises, footer }) => {
+  const [currentExercise, setCurrentExercise] = useState(0);
+  const [userAnswer, setUserAnswer] = useState('');
+  const [validated, setValidated] = useState(false);
+  const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
 
-  const handleAnswerChange = (index: number, value: string) => {
-    const newAnswers = [...state.answers];
-    newAnswers[index] = value;
-    setState({ ...state, answers: newAnswers });
+  const exercise = exercises[currentExercise];
+
+  const stripMarkdown = (str: string): string => {
+    return str
+      .replace(/\*\*([^*]+)\*\*/g, '$1') // remove bold
+      .replace(/\*([^*]+)\*/g, '$1')     // remove italics
+      .replace(/[_~`>#]/g, '')           // remove other markdown symbols
+      .trim();
   };
 
-  const handleSubmit = (index: number) => {
-    const isCorrect = state.answers[index].toLowerCase().trim() === 
-      exercises[index].answer.toLowerCase().trim();
-    
-    const newSubmitted = [...state.submitted];
-    const newIsCorrect = [...state.isCorrect];
-    
-    newSubmitted[index] = true;
-    newIsCorrect[index] = isCorrect;
-    
-    setState({
-      ...state,
-      submitted: newSubmitted,
-      isCorrect: newIsCorrect
-    });
+  const checkAnswer = () => {
+    const normalizedUser = userAnswer.trim().toLowerCase();
+    const normalizedCorrect = stripMarkdown(exercise.answer).toLowerCase();
+    setIsCorrect(normalizedUser === normalizedCorrect);
+    setValidated(true);
+  };
+
+  const handleNext = () => {
+    setCurrentExercise(prev => (prev < exercises.length - 1 ? prev + 1 : prev));
+    setUserAnswer('');
+    setValidated(false);
+    setIsCorrect(null);
+  };
+
+  const handlePrev = () => {
+    setCurrentExercise(prev => (prev > 0 ? prev - 1 : prev));
+    setUserAnswer('');
+    setValidated(false);
+    setIsCorrect(null);
   };
 
   return (
     <div className="drill">
-      <div className="drill-description">{description}</div>
+      <h2><ReactMarkdown>{title}</ReactMarkdown></h2>
+      <p className="description"><ReactMarkdown>{description}</ReactMarkdown></p>
       
-      <div className="exercises-list">
-        {exercises.map((exercise, index) => (
-          <div key={index} className="exercise-item">
-            <div className="exercise-question">
-              {exercise.question}
-            </div>
-            <div className="exercise-answer">
-              <input
-                type={exercise.type === 'true-false' ? 'checkbox' : 'text'}
-                value={state.answers[index]}
-                onChange={(e) => handleAnswerChange(index, 
-                  exercise.type === 'true-false' ? e.target.checked.toString() : e.target.value
-                )}
-                disabled={state.submitted[index]}
-              />
-              <button 
-                onClick={() => handleSubmit(index)}
-                disabled={state.submitted[index]}
-              >
-                Verificar
-              </button>
-              {state.submitted[index] && (
-                <span className="result">
-                  {state.isCorrect[index] ? '✅' : '❌'}
-                </span>
-              )}
-            </div>
+      <div className="exercise">
+        <h3>Exercise {currentExercise + 1} of {exercises.length}</h3>
+        <div className="question">
+          <ReactMarkdown>{exercise.question}</ReactMarkdown>
+        </div>
+
+        {exercise.type === 'true-false' ? (
+          <div className="true-false-buttons">
+            <button 
+              className={userAnswer === 'true' ? "selected" : ""}
+              onClick={() => setUserAnswer('true')}
+            >
+              True
+            </button>
+            <button 
+              className={userAnswer === 'false' ? "selected" : ""}
+              onClick={() => setUserAnswer('false')}
+            >
+              False
+            </button>
           </div>
-        ))}
+        ) : exercise.type === 'selection' ? (
+          <div className="selection-options">
+            {exercise.options?.map((option, index) => (
+              <button
+                key={index}
+                className={userAnswer === option ? "selected" : ""}
+                onClick={() => setUserAnswer(option)}
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+        ) : (
+          <input
+            type="text"
+            value={userAnswer}
+            onChange={(e) => setUserAnswer(e.target.value)}
+            placeholder="Enter your answer..."
+          />
+        )}
+
+        <div className="buttons">
+          <button onClick={handlePrev} disabled={currentExercise === 0}>Prev</button>
+          <button onClick={checkAnswer}>Check Answer</button>
+          <button onClick={handleNext} disabled={currentExercise === exercises.length - 1}>Next</button>
+        </div>
+
+        {validated && (
+          <div className="answer">
+            {isCorrect ? (
+              <strong style={{ color: 'green' }}>Correct!</strong>
+            ) : (
+              <span>
+                <strong style={{ color: 'red' }}>Incorrect!</strong> The correct answer is: <ReactMarkdown>{exercise.answer}</ReactMarkdown>
+              </span>
+            )}
+          </div>
+        )}
       </div>
 
-      <div className="drill-footer">{footer}</div>
+      {footer && (
+        <div className="footer">
+          <ReactMarkdown>{footer}</ReactMarkdown>
+        </div>
+      )}
     </div>
   );
 };
