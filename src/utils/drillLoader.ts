@@ -1,4 +1,4 @@
-import { DrillProps, Exercise, ExerciseType } from '../types/drill';
+import { DrillProps, ExerciseType } from '../types/drill';
 import basicGreetingsComprehensive from '../data/drills/basic-greetings-comprehensive.json';
 import basicGreetingsUnseen from '../data/drills/basic-greetings-unseen.json';
 import basicNumbers from '../data/drills/portuguese-numbers.json';
