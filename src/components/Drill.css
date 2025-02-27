@@ -118,3 +118,122 @@ input[type="text"]:focus {
   background: rgba(247, 250, 252, 0.8);
   border-radius: 4px;
 }
+
+.exercise-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.exercise-navigation button {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.exercise-navigation button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.input-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.validation-marker {
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
+.validation-marker.correct {
+  color: #4CAF50;
+}
+
+.validation-marker.incorrect {
+  color: #f44336;
+}
+
+input {
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2196F3;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+}
+
+/* Immediate validation feedback */
+.input-wrapper input,
+.input-wrapper select {
+  transition: border-color 0.2s ease;
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus {
+  border-color: #2196F3;
+}
+
+.input-wrapper .validation-marker {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.input-wrapper .validation-marker.correct {
+  opacity: 1;
+}
+
+/* Markdown content styles */
+.drill .title {
+  margin-bottom: 1rem;
+}
+
+.drill .description {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.drill .title h1,
+.drill .title h2 {
+  margin: 0;
+}
+
+.drill .description p {
+  margin: 0.5rem 0;
+}
+
+.drill .description ul,
+.drill .description ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.drill .footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-radius: 4px;
+  font-style: italic;
+}
+
+/* Code blocks in markdown */
+.drill pre {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+/* Inline code in markdown */
+.drill code {
+  background: #f8f9fa;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}

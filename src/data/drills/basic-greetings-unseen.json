@@ -1,0 +1,27 @@
+{
+  "id": "basic-greetings-1",
+  "title": "# Basic Greetings",
+  "description": "Practice basic Portuguese greetings by filling in the blanks.",
+  "exercises": [
+    {
+      "question": "Complete: Bom ___ (Good morning)",
+      "answers": [
+        {
+          "correct": "dia",
+          "type": "free-text"
+        }
+      ]
+    },
+    {
+      "question": "Select the correct greeting: ___ (Good afternoon)",
+      "answers": [
+        {
+          "correct": "boa tarde",
+          "type": "selection",
+          "options": ["bom dia", "boa tarde", "boa noite"]
+        }
+      ]
+    }
+  ],
+  "footer": "*Practice these greetings daily to improve your fluency!*"
+}

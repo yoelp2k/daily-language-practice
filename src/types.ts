@@ -1,10 +1,14 @@
 export type ExerciseType = 'free-text' | 'true-false' | 'selection' | 'unseen';
 
-export interface Exercise {
-  question: string;  // Supports Markdown
-  answer: string;    // Supports Markdown (validation is case-insensitive)
+export interface Answer {
+  correct: string;
   type: ExerciseType;
-  options?: string[];  // For selection-type exercises
+  options?: string[];
+}
+
+export interface Exercise {
+  question: string;
+  answers: Answer[];
 }
 
 export interface DrillProps {
@@ -16,7 +20,11 @@ export interface DrillProps {
 }
 
 export interface DrillState {
-  answers: string[];
-  submitted: boolean[];
-  isCorrect: boolean[];
+  currentExerciseIndex: number;
+  userAnswers: {
+    [key: number]: string[];
+  };
+  isCorrect: {
+    [key: number]: boolean[];
+  };
 }

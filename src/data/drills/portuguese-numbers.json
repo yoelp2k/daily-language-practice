@@ -1,50 +1,110 @@
 {
   "id": "portuguese-numbers-drill",
-  "title": "# Portuguese Numbers Drill",
-  "description": "Practice the basic numbers in Portuguese. Learn to count from **one** to **ten** and beyond.",
+  "title": "Portuguese Numbers Drill",
+  "description": "Practice the basic numbers in Portuguese. Learn to count from **one** to **one hundred** and beyond.",
   "exercises": [
     {
-      "question": "How do you say '**one**' in Portuguese?",
-      "answer": "**um**",
-      "type": "free-text"
+      "question": "How do you say '**one**' in Portuguese? - ____",
+      "answers": [
+        { "correct": "um", "type": "free-text" }
+      ]
     },
     {
-      "question": "How do you say '**two**' in Portuguese?",
-      "answer": "**dois**",
-      "type": "free-text"
+      "question": "How do you say '**two**' in Portuguese? - ____",
+      "answers": [
+        { "correct": "dois", "type": "free-text" }
+      ]
     },
     {
-      "question": "How do you say '**three**' in Portuguese?",
-      "answer": "**três**",
-      "type": "free-text"
+      "question": "How do you say '**three**' in Portuguese? - ____",
+      "answers": [
+        { "correct": "três", "type": "free-text" }
+      ]
     },
     {
-      "question": "Choose the correct translation for '**four**' in Portuguese:",
-      "answer": "**quatro**",
-      "type": "selection",
-      "options": ["**quatro**", "**cinco**", "**seis**"]
+      "question": "Choose the correct translation for '**four**' in Portuguese: [a) quatro, b) cinco, c) seis] - ____",
+      "answers": [
+        { "correct": "a", "type": "selection", "options": ["a", "b", "c"] }
+      ]
     },
     {
-      "question": "What is the correct Portuguese word for '**five**'?",
-      "answer": "**cinco**",
-      "type": "free-text"
+      "question": "What is the correct Portuguese word for '**five**'? - ____",
+      "answers": [
+        { "correct": "cinco", "type": "free-text" }
+      ]
     },
     {
-      "question": "Is '**sete**' the translation for '**seven**' in Portuguese?",
-      "answer": "true",
-      "type": "true-false"
+      "question": "Is '**sete**' the translation for '**seven**' in Portuguese? - ____",
+      "answers": [
+        { "correct": "true", "type": "selection", "options": ["true", "false"] }
+      ]
     },
     {
-      "question": "How do you say '**ten**' in Portuguese?",
-      "answer": "**dez**",
-      "type": "free-text"
+      "question": "How do you say '**ten**' in Portuguese? - ____",
+      "answers": [
+        { "correct": "dez", "type": "free-text" }
+      ]
     },
     {
-      "question": "Choose the correct translation for '**nine**' in Portuguese:",
-      "answer": "**nove**",
-      "type": "selection",
-      "options": ["**oito**", "**nove**", "**dez**"]
+      "question": "Choose the correct translation for '**nine**' in Portuguese: [a) oito, b) nove, c) dez] - ____",
+      "answers": [
+        { "correct": "b", "type": "selection", "options": ["a", "b", "c"] }
+      ]
+    },
+    {
+      "question": "How do you say '**twenty**' in Portuguese? - ____",
+      "answers": [
+        { "correct": "vinte", "type": "free-text" }
+      ]
+    },
+    {
+      "question": "How do you say '**thirty**' in Portuguese? - ____",
+      "answers": [
+        { "correct": "trinta", "type": "free-text" }
+      ]
+    },
+    {
+      "question": "How do you say '**forty**' in Portuguese? - ____",
+      "answers": [
+        { "correct": "quarenta", "type": "free-text" }
+      ]
+    },
+    {
+      "question": "How do you say '**fifty**' in Portuguese? - ____",
+      "answers": [
+        { "correct": "cinquenta", "type": "free-text" }
+      ]
+    },
+    {
+      "question": "How do you say '**sixty**' in Portuguese? - ____",
+      "answers": [
+        { "correct": "sessenta", "type": "free-text" }
+      ]
+    },
+    {
+      "question": "How do you say '**seventy**' in Portuguese? - ____",
+      "answers": [
+        { "correct": "setenta", "type": "free-text" }
+      ]
+    },
+    {
+      "question": "How do you say '**eighty**' in Portuguese? - ____",
+      "answers": [
+        { "correct": "oitenta", "type": "free-text" }
+      ]
+    },
+    {
+      "question": "How do you say '**ninety**' in Portuguese? - ____",
+      "answers": [
+        { "correct": "noventa", "type": "free-text" }
+      ]
+    },
+    {
+      "question": "How do you say '**one hundred**' in Portuguese? - ____",
+      "answers": [
+        { "correct": "cem", "type": "free-text" }
+      ]
     }
   ],
-  "footer": "**Tip:** Practice these numbers aloud to master pronunciation. Try counting everyday objects in Portuguese!"
+  "footer": "**Tip:** Practice these numbers aloud to master pronunciation. Try counting everyday objects in Portuguese! Use these numbers in sentences to get familiar with their usage."
 }

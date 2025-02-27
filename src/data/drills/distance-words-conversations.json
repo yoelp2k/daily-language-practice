@@ -1,0 +1,76 @@
+{
+    "id": "distance-words-conversations",
+    "title": "Understanding Distance Words in Portuguese",
+    "description": "Practice using 'aqui', 'aí', 'ali', and 'lá' in real conversations by filling in the blanks.",
+    "exercises": [
+      {
+        "question": "Imagine you are at home, and your friend João is at a café. João calls you and asks:\n\nJoão: Onde você está agora?\nVocê responde: Estou ____ em casa. E você?\nJoão: Estou ____ no café perto do trabalho.",
+        "answers": [
+          { "correct": "aqui", "type": "free-text" },
+          { "correct": "aí", "type": "free-text" }
+        ]
+      },
+      {
+        "question": "You are at a party with your friend. Your friend is standing next to you and looking for the drinks table, which is a few meters away.\n\nAmigo: Onde estão as bebidas?\nVocê: Estão ____ naquela mesa.",
+        "answers": [
+          { "correct": "ali", "type": "free-text" }
+        ]
+      },
+      {
+        "question": "You are talking on the phone with a friend who is in another city. Your friend asks about the weather.\n\nAmigo: Como está o tempo ____?\nVocê: Está ensolarado aqui, e ____?",
+        "answers": [
+          { "correct": "aí", "type": "free-text" },
+          { "correct": "aí", "type": "free-text" }
+        ]
+      },
+      {
+        "question": "You and your friend are in a shopping mall. Your friend sees a store in the distance and asks:\n\nAmigo: A nova loja que abriu é ____?\nVocê: Sim, está bem ____ naquela esquina.",
+        "answers": [
+          { "correct": "ali", "type": "free-text" },
+          { "correct": "ali", "type": "free-text" }
+        ]
+      },
+      {
+        "question": "Your brother is traveling in another country. You are texting him and asking about his trip.\n\nVocê: Como estão as coisas ____ na Espanha?\nIrmão: Estão ótimas! Mas eu sinto falta de estar ____ com você.",
+        "answers": [
+          { "correct": "lá", "type": "free-text" },
+          { "correct": "aí", "type": "free-text" }
+        ]
+      },
+      {
+        "question": "You and your friend are in a park. Your friend is sitting on a bench, and you are standing near a food cart. Your friend asks:\n\nAmigo: Onde você está?\nVocê: Estou ____ perto do carrinho de comida, e você?\nAmigo: Estou sentado ____ nesse banco.",
+        "answers": [
+          { "correct": "aqui", "type": "free-text" },
+          { "correct": "aí", "type": "free-text" }
+        ]
+      },
+      {
+        "question": "Your grandmother calls you and says she left her glasses somewhere in the living room. You see them on the table and respond:\n\nVocê: Seus óculos estão ____ na mesa ao lado do sofá!",
+        "answers": [
+          { "correct": "aqui", "type": "free-text" }
+        ]
+      },
+      {
+        "question": "You are in a city, and you are giving directions to a tourist. The tourist asks:\n\nTurista: Onde fica a estação de trem?\nVocê: A estação de trem está ____ naquela rua à esquerda.",
+        "answers": [
+          { "correct": "ali", "type": "free-text" }
+        ]
+      },
+      {
+        "question": "You and a friend are looking at a photo. You are pointing to a person in the picture and explaining:\n\nVocê: Esse sou eu ____ no centro da foto, e esse é meu irmão ____ do meu lado.",
+        "answers": [
+          { "correct": "aqui", "type": "free-text" },
+          { "correct": "aí", "type": "free-text" }
+        ]
+      },
+      {
+        "question": "You are in Brazil talking to a friend who is currently in Japan.\n\nAmigo: Como estão as coisas ____ no Brasil?\nVocê: Estão boas! E como está a vida ____ no Japão?",
+        "answers": [
+          { "correct": "aí", "type": "free-text" },
+          { "correct": "lá", "type": "free-text" }
+        ]
+      }
+    ],
+    "footer": "Tip: 'Aqui' means something is close to you, 'aí' means it's near the listener, 'ali' means it's a bit further but still visible, and 'lá' means it's far away. Try using these words in everyday conversations to practice!"
+  }
+  
