@@ -3,6 +3,7 @@ import './App.css';
 import Drill from './components/Drill';
 import { DrillProps } from './types';
 import { loadDrills } from './utils/drillLoader';
+import Footer from './components/Footer';
 
 const App: React.FC = () => {
   const [selectedDrill, setSelectedDrill] = useState<DrillProps | null>(null);
@@ -58,6 +59,7 @@ const App: React.FC = () => {
           </div>
         )}
       </div>
+      <Footer />
     </div>
   );
 };

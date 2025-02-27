@@ -4,18 +4,22 @@ on:
     branches:
       - main
 
+permissions: # Add this section at the root level
+  contents: write
+  issues: write
+  pull-requests: write
+  discussions: write
+
 jobs:
   release-and-deploy:
     name: Release and Deploy
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: false # Add this line
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -28,6 +32,7 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Add this line
         run: npx semantic-release
 
       - name: Build
