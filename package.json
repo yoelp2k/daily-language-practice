@@ -1,5 +1,5 @@
 {
-  "name": "verticalingo",
+  "name": "daily-language-practice",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://yoelp2k.github.io/daily-language-practice",
@@ -11,17 +11,17 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.3",
+    "@semantic-release/npm": "^11.0.2",
+    "@semantic-release/release-notes-generator": "^12.1.0",
     "@types/node": "^18.15.11",
     "@types/react": "^18.2.34",
     "@types/react-dom": "^18.2.14",
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^8.0.0",
-    "@semantic-release/npm": "^10.0.0",
-    "@semantic-release/commit-analyzer": "^9.0.0",
-    "@semantic-release/release-notes-generator": "^10.0.0",
-    "semantic-release": "^19.0.0",
-    "gh-pages": "^6.0.0"
+    "gh-pages": "^6.3.0",
+    "semantic-release": "^23.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -33,7 +33,9 @@
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
-    "extends": ["react-app"]
+    "extends": [
+      "react-app"
+    ]
   },
   "browserslist": {
     "production": [
@@ -52,17 +54,28 @@
     "url": "https://github.com/yoelp2k/daily-language-practice.git"
   },
   "release": {
-    "branches": ["main"],
+    "branches": [
+      "main"
+    ],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
-      ["@semantic-release/changelog", {
-        "changelogFile": "CHANGELOG.md"
-      }],
-      ["@semantic-release/git", {
-        "assets": ["package.json", "CHANGELOG.md"],
-        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-      }],
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md"
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ],
       "@semantic-release/github"
     ]
   }
