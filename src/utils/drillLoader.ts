@@ -9,29 +9,6 @@ const isExerciseType = (type: string): type is ExerciseType => {
   return Object.values(ExerciseType).includes(type as ExerciseType);
 };
 
-const validateExercise = (exercise: unknown): exercise is Exercise => {
-  if (!exercise || typeof exercise !== 'object') return false;
-  const ex = exercise as Record<string, unknown>;
-  
-  return (
-    typeof ex.question === 'string' &&
-    Array.isArray(ex.answers) &&
-    ex.answers.every((answer: unknown) => {
-      if (!answer || typeof answer !== 'object') return false;
-      const ans = answer as Record<string, unknown>;
-      return (
-        typeof ans.correct === 'string' &&
-        typeof ans.type === 'string' &&
-        isExerciseType(ans.type) &&
-        (!ans.options || (
-          Array.isArray(ans.options) &&
-          ans.options.every((opt: unknown) => typeof opt === 'string')
-        ))
-      );
-    })
-  );
-};
-
 const validateDrill = (drill: any): drill is DrillProps => {
   if (!drill.id || typeof drill.id !== 'string') {
     console.warn('Invalid drill: missing or invalid id');
