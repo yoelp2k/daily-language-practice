@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/daily-language-practice/static/css/main.e2504dc7.css",
-    "main.js": "/daily-language-practice/static/js/main.ace6ab0e.js",
+    "main.css": "/daily-language-practice/static/css/main.653679d4.css",
+    "main.js": "/daily-language-practice/static/js/main.107e9f5b.js",
     "index.html": "/daily-language-practice/index.html",
-    "main.e2504dc7.css.map": "/daily-language-practice/static/css/main.e2504dc7.css.map",
-    "main.ace6ab0e.js.map": "/daily-language-practice/static/js/main.ace6ab0e.js.map"
+    "main.653679d4.css.map": "/daily-language-practice/static/css/main.653679d4.css.map",
+    "main.107e9f5b.js.map": "/daily-language-practice/static/js/main.107e9f5b.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2504dc7.css",
-    "static/js/main.ace6ab0e.js"
+    "static/css/main.653679d4.css",
+    "static/js/main.107e9f5b.js"
   ]
 }
